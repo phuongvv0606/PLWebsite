@@ -93,7 +93,8 @@
     <Property Name="ImagesPreview" Type="nvarchar" MaxLength="500" />
     <Property Name="Status" Type="int" />
     <Property Name="Keyword" Type="nvarchar" MaxLength="500" />
-    <Property Name="Pioriti" Type="nchar" MaxLength="10" />
+    <Property Name="Pioriti" Type="int" />
+    <Property Name="CateId" Type="int" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>

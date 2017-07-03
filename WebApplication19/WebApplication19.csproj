@@ -239,6 +239,7 @@
     <Content Include="Images\img\t01.png" />
     <Content Include="Images\seo1.jpg" />
     <Content Include="Images\seo2.jpg" />
+    <Content Include="Images\web.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\Model1.edmx">
@@ -286,6 +287,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\GetSlider.cshtml" />
     <Content Include="Views\Home\GetMenu.cshtml" />
+    <Content Include="Views\Home\GetHomePageSevice.cshtml" />
+    <Content Include="Views\Home\GetTopHomeProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

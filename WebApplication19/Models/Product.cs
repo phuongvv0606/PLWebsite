@@ -23,6 +23,7 @@ namespace WebApplication19.Models
         public string ImagesPreview { get; set; }
         public Nullable<int> Status { get; set; }
         public string Keyword { get; set; }
-        public string Pioriti { get; set; }
+        public Nullable<int> Pioriti { get; set; }
+        public Nullable<int> CateId { get; set; }
     }
 }

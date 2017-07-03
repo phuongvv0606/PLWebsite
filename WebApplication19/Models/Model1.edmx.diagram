@@ -5,15 +5,15 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="02af887de6ea41028f1e48627073cacc" Name="Diagram1">
-        <EntityTypeShape EntityType="plModel.Article" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="plModel.Category" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="plModel.Image" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="plModel.ImageType" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="plModel.Menu" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="plModel.OrderDetail" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="plModel.Order" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="plModel.Product" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="plModel.sysdiagram" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="plModel.Article" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="plModel.Category" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="plModel.Image" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="plModel.ImageType" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="plModel.Menu" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="plModel.OrderDetail" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="plModel.Order" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="plModel.Product" Width="1.5" PointX="6.75" PointY="4.75" />
+        <EntityTypeShape EntityType="plModel.sysdiagram" Width="1.5" PointX="0.75" PointY="7.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

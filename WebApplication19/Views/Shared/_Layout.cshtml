@@ -12,38 +12,45 @@
     <link href="@Url.Content("~/Content/font-awesome.min.css")" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-      <div class="toppage">
-          <div class="topfix">
-              xxxxxxxxxxxxxxxx
-          </div>
-          <div class="toplogo">
-              xxxxxxxxxxxxxxxxxxxx
-          </div>
-          <div class="topmenu">
-              @Html.Action("GetMenu", "Home")
-          </div>
-      </div>
-      <div class="slider">
-          @Html.Action("GetSlider","Home")
-      </div>
-      <div class="services">
+    <div class="container">
+        <div class="toppage">
+            <div class="topfix">
+                xxxxxxxxxxxxxxxx
+            </div>
+            <div class="toplogo">
+                xxxxxxxxxxxxxxxxxxxx
+            </div>
+            <div class="topmenu">
+                @Html.Action("GetMenu", "Home")
+            </div>
+        </div>
+        <div class="slider">
+            @Html.Action("GetSlider", "Home")
+        </div>
+        <div class="services">
+            @Html.Action("GetHomePageSevice", "Home")
+        </div>
+        <div class="topproduct">
+            @Html.Action("GetTopHomeProduct", "Home")
+        </div>
+        <div class="about">
 
-      </div>
-      <div class="topproduct">
+        </div>
+        <div class="customer">
 
-      </div>
-      <div class="about">
+        </div>
+        <div class="bottompage">
 
-      </div>
-      <div class="customer">
+        </div>
+        @RenderBody()
+    </div>
 
-      </div>
-      <div class="bottompage">
-
-      </div>
-      @RenderBody()
-  </div>
-    
 </body>
 </html>
+<style>
+    img {
+        max-width: 100%;
+        display: block;
+        margin: auto;
+    }
+</style>

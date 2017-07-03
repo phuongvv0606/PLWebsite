@@ -17,11 +17,31 @@ namespace WebApplication19.Controllers
 
         public ActionResult GetSlider()
         {
-            return PartialView(db.Images.OrderByDescending(m=>m.Id).Where(m=>m.Types == (int)Types.IMAGE.SLIDER).ToList());
+            return PartialView(db.Images.OrderByDescending(m => m.Id).Where(m => m.Types == (int)Types.IMAGE.SLIDER).ToList());
         }
         public ActionResult GetMenu()
-        {            
+        {
             return PartialView(db.Menus.OrderBy(m => m.Pioriti).ToList());
         }
+        public ActionResult GetHomePageSevice()
+        {
+            return PartialView(db.Products.
+                OrderByDescending(m => m.Id).
+                Where(m => m.CateId == (int)Types.Category.SEVICE).
+                Take(4).ToList());
+        }
+        public ActionResult GetTopHomeProduct()
+        {
+            return PartialView(db.Products.
+                OrderByDescending(m => m.Pioriti).
+                Where(m => m.CateId == (int)Types.Category.PRODUCT).
+                Where(m=>m.Status==(int)Types.Status.DISPLAY).
+                Take(9).ToList()); 
+        }
+        public ActionResult AboutHomePage()
+        {
+            return PartialView();
+        }
+        
     }
 }

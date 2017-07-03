@@ -1,0 +1,49 @@
+﻿@model List<WebApplication19.Models.Product>
+<div class="row">
+    <p>
+        <h3 class="sevicetitle">Dịch vụ của chúng tôi</h3>
+    </p>
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-3 col-xs-6">
+            <div class="seviceicon">
+                @Html.Raw(item.ImagesPreview)
+            </div>
+            <div class="sevicename">
+                @item.Names
+            </div>
+            <div class="sevicedesc">
+                @item.SortDesc
+            </div>
+        </div>
+    }
+</div>
+<style>
+    .sevicetitle {
+        display: block;
+        margin: auto;
+        text-align: center;
+        color: #ff0000;
+        font-weight: bold;
+        text-transform: uppercase;
+        position:relative;
+    }  
+    .seviceicon {
+        display: block;
+        margin: auto;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .sevicename {
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+    .sevicedesc {
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+</style>
