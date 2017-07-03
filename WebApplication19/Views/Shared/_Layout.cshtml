@@ -15,34 +15,47 @@
     <div class="container">
         <div class="toppage">
             <div class="topfix">
-                xxxxxxxxxxxxxxxx
+                <div class="phone">
+                    <ul>
+                        <li>
+                            <a href="tel:+84981407789">
+                                Kỹ thuật 24/7: 0981407789
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+84976876663">
+                                Kinh doanh: 0976876663
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="email">
+                    <ul>
+                        <li>
+                            <a>
+                                Kỹ thuật 24/7: support@plsoft.com
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                Kinh doanh: Sale@plsoft.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="toplogo">
-                xxxxxxxxxxxxxxxxxxxx
-            </div>
+
             <div class="topmenu">
                 @Html.Action("GetMenu", "Home")
             </div>
         </div>
-        <div class="slider">
-            @Html.Action("GetSlider", "Home")
-        </div>
-        <div class="services">
-            @Html.Action("GetHomePageSevice", "Home")
-        </div>
-        <div class="topproduct">
-            @Html.Action("GetTopHomeProduct", "Home")
-        </div>
-        <div class="about">
-
-        </div>
-        <div class="customer">
-
+        <div>
+            @RenderBody()
         </div>
         <div class="bottompage">
 
         </div>
-        @RenderBody()
+
     </div>
 
 </body>
@@ -52,5 +65,24 @@
         max-width: 100%;
         display: block;
         margin: auto;
+    }
+
+    .navbar-inverse {
+        background-color: #fff;
+        border-color: #fff;
+        color: #000;
+    }
+
+    .phone {
+        float: left;
+    }
+
+    .email {
+        float: right;
+    }
+
+    .topfix {
+        display: inline-block;
+        width:100%;
     }
 </style>

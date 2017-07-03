@@ -1,0 +1,22 @@
+﻿@model WebApplication19.Models.Article
+<div>
+    <p>
+        <h3>@Model.Titles</h3>
+    </p>
+    <p>
+        @Html.Raw(Model.SortDesc)
+    </p>
+    <p>
+        <a class="viewdetailbutton" href="@Url.Action("ArticleDetail", "Home", new { id = Model.Id, seourl = Model.SeoUrl })">
+            Xem chi tiết
+        </a>
+    </p>
+
+</div>
+<style>
+    .viewdetailbutton {
+        padding: 5px 10px;
+        background-color: #ff248f;
+        color: #fff;
+    }
+</style>

@@ -13,6 +13,7 @@
     <Property Name="Keywrod" Type="nvarchar" MaxLength="500" />
     <Property Name="CreateDate" Type="datetime" />
     <Property Name="Status" Type="int" />
+    <Property Name="CateId" Type="int" />
   </EntityType>
   <EntityType Name="Categories">
     <Key>

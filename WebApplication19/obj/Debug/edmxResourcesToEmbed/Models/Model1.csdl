@@ -24,6 +24,7 @@
     <Property Name="Keywrod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="CreateDate" Type="DateTime" Precision="3" />
     <Property Name="Status" Type="Int32" />
+    <Property Name="CateId" Type="Int32" />
   </EntityType>
   <EntityType Name="Category">
     <Key>

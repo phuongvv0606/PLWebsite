@@ -18,6 +18,7 @@
           <Property Name="Keywrod" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="Status" Type="int" />
+          <Property Name="CateId" Type="int" />
         </EntityType>
         <EntityType Name="Categories">
           <Key>
@@ -150,6 +151,7 @@
           <Property Name="Keywrod" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="Status" Type="Int32" />
+          <Property Name="CateId" Type="Int32" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -252,6 +254,7 @@
           <EntitySetMapping Name="Articles">
             <EntityTypeMapping TypeName="plModel.Article">
               <MappingFragment StoreEntitySet="Articles">
+                <ScalarProperty Name="CateId" ColumnName="CateId" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
                 <ScalarProperty Name="Keywrod" ColumnName="Keywrod" />

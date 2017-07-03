@@ -35,13 +35,16 @@ namespace WebApplication19.Controllers
             return PartialView(db.Products.
                 OrderByDescending(m => m.Pioriti).
                 Where(m => m.CateId == (int)Types.Category.PRODUCT).
-                Where(m=>m.Status==(int)Types.Status.DISPLAY).
-                Take(9).ToList()); 
+                Where(m => m.Status == (int)Types.Status.DISPLAY).
+                Take(9).ToList());
         }
         public ActionResult AboutHomePage()
         {
-            return PartialView();
+            return PartialView(db.Articles.Where(m => m.CateId == (int)Types.Article.ABOUT).FirstOrDefault());
         }
-        
+        public ActionResult GetAllProduct()
+        {
+            return View();
+        }
     }
 }

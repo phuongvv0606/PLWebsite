@@ -14,10 +14,15 @@ namespace WebApplication19
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "productdetail",
+                name: "Prodetail",
                 url: "san-pham/{id}/{seourl}",
                 defaults: new { controller = "Home", action = "Prodetail", id = UrlParameter.Optional, seourl = UrlParameter.Optional }
             );
+            routes.MapRoute(
+               name: "ArticleDetail",
+               url: "bai-viet/{id}/{seourl}",
+               defaults: new { controller = "Home", action = "ArticleDetail", id = UrlParameter.Optional, seourl = UrlParameter.Optional }
+           );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

@@ -10,12 +10,11 @@
             <span class="icon-bar"></span>
         </button>
         <a style="" class="navbar-brand" href="@Url.Content("~")">
-            <i class="fa fa-home" aria-hidden="true"></i>
+            Logo page
         </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
-
-        <ul class="nav navbar-nav ">
+        <ul class="nav navbar-nav navbar-right">
             @foreach (var item in Model)
             {
                 <li>
@@ -39,7 +38,7 @@
         }
 
     .navbar-brand {
-        color: #fff;
+        color: #000;
         font-weight: bold;
         margin-top: 5px;
         padding: 0px;
@@ -47,5 +46,17 @@
         font-style: italic;
         font-size: 40px;
         margin-left: 10px;
+    }
+    #myNavbar ul li a{
+        color:#000;
+    }
+    .navbar-toggle{
+        background-color:#000;
+    }
+    .navbar-inverse .navbar-brand {
+        color:#000;
+    }
+    .navbar-inverse .navbar-brand:hover {
+        color: #000;
     }
 </style>

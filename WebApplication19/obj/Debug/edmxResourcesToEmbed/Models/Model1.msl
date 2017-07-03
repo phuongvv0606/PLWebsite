@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Articles">
       <EntityTypeMapping TypeName="plModel.Article">
         <MappingFragment StoreEntitySet="Articles">
+          <ScalarProperty Name="CateId" ColumnName="CateId" />
           <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
           <ScalarProperty Name="Keywrod" ColumnName="Keywrod" />

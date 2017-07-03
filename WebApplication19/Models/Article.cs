@@ -23,5 +23,6 @@ namespace WebApplication19.Models
         public string Keywrod { get; set; }
         public Nullable<System.DateTime> CreateDate { get; set; }
         public Nullable<int> Status { get; set; }
+        public Nullable<int> CateId { get; set; }
     }
 }
