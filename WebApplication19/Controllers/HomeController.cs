@@ -17,7 +17,7 @@ namespace WebApplication19.Controllers
 
         public ActionResult GetSlider()
         {
-            return PartialView();
+            return PartialView(db.Images.OrderByDescending(m=>m.Id).Where(m=>m.Types == (int)Types.IMAGE.SLIDER).ToList());
         }
         public ActionResult GetMenu()
         {            
