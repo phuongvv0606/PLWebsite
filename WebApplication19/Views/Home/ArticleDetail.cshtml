@@ -1,0 +1,23 @@
+﻿@model WebApplication19.Models.Article
+
+<div class="container">
+    <div>
+        <h3>
+            @Model.Titles
+        </h3>
+    </div>
+    <div>
+        <img src="@Url.Content(Model.ImagePreview)" />
+    </div>
+    <div style="font-style:italic;font-weight:bold">
+        @Html.Raw(Model.SortDesc)
+    </div>
+    <p></p>
+    <div>
+        @Html.Raw(Model.Contents)
+    </div>
+    <div>
+        @Model.CreateDate
+    </div>
+  
+</div>

@@ -1,0 +1,23 @@
+﻿@model List<WebApplication19.Models.Product>
+
+@foreach (var item in Model)
+{
+    <div class="col-lg-4 col-md-6 ">
+        <div class="productitem">
+            <a href="@Url.Action("Prodetail", "Home", new  { id = item.Id, seourl = item.SeoUrl })">
+                <div class="imagepreview">
+                    <img alt="@item.Names" src="@Url.Content(item.ImagesPreview)" />
+                </div>
+                <div class="proname">
+                    <h3>
+                        @item.Names
+                    </h3>
+                </div>
+            </a>
+            <p>
+                <a href="@Url.Action("ConfirmOrder", "Home", new { id = item.Id })">Đặt hàng</a>
+            </p>
+        </div>
+
+    </div>
+}

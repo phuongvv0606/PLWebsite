@@ -1,0 +1,22 @@
+﻿@model List<WebApplication19.Models.Category>
+<div class="chidcate">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <div>
+                    <a href="@Url.Action("GetAllProductByCate", "Home", new { id = item.Id, seourl = item.SeoUrl })">
+                        @item.Names
+                    </a>
+                </div>
+                
+                <div>
+                    @Html.Action("GetProductChidCate", "Home", new { id = item.Id })
+                </div>
+            </li>
+        }
+    </ul>
+</div>
+<style>
+   
+</style>

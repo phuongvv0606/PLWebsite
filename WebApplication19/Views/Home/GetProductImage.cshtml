@@ -1,0 +1,20 @@
+﻿@model List<WebApplication19.Models.Image>
+
+<div>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a href="@item.Links">
+                    <p style="text-align:center;font-weight:bold;font-size:20px">
+                        @item.Titles
+                    </p>
+                    <p>
+                        <img alt="@item.Titles" src="@Url.Content(item.Paths)" />
+                    </p>
+                </a>
+
+            </li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,60 @@
+﻿@model WebApplication19.Models.Product
+@{
+    ViewBag.Title = Model.Names;
+}
+
+<div class="row">
+    <div class="col-lg-3">
+        @Html.Action("GetProductParentCate", "Home")
+    </div>
+    <div class="col-lg-9">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>
+                    @Model.Names
+                </h2>
+                <div>
+                    @Html.Raw(Model.SortDesc)
+                </div>
+                <p></p>
+                <div>
+                    <a href="#" style="border:solid 1px;padding:5px 10px;border-radius:5px;font-weight:bold;">@Model.Prices</a>
+
+                    <a href="#" style="border:solid 1px;padding:5px 10px;border-radius:5px;font-weight:bold;">Đặt hàng</a>
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div>
+                    <img alt="@Model.Names" src="@Url.Content(Model.ImagesPreview)" />
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                @Html.Raw(Model.Descriptions)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>
+                    <h3>
+                        Album ảnh
+                    </h3>
+                </p>
+                <div>
+                    @Html.Action("GetProductImage", "Home", new { id = Model.Id })
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>
+                    Cùng danh mục
+                </h3>
+            </div>
+            @Html.Action("SameCateProduct", "Home", new {cateid=Model.CateId,proid=Model.Id })
+        </div>
+    </div>
+
+</div>

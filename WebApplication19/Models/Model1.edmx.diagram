@@ -13,7 +13,9 @@
         <EntityTypeShape EntityType="plModel.OrderDetail" Width="1.5" PointX="4.75" PointY="4.75" />
         <EntityTypeShape EntityType="plModel.Order" Width="1.5" PointX="6.75" PointY="0.75" />
         <EntityTypeShape EntityType="plModel.Product" Width="1.5" PointX="6.75" PointY="4.75" />
-        <EntityTypeShape EntityType="plModel.sysdiagram" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="plModel.Support" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="plModel.sysdiagram" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="plModel.SystemConfig" Width="1.5" PointX="8.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -9,7 +9,9 @@
     <EntitySet Name="OrderDetails" EntityType="plModel.OrderDetail" />
     <EntitySet Name="Orders" EntityType="plModel.Order" />
     <EntitySet Name="Products" EntityType="plModel.Product" />
+    <EntitySet Name="Supports" EntityType="plModel.Support" />
     <EntitySet Name="sysdiagrams" EntityType="plModel.sysdiagram" />
+    <EntitySet Name="SystemConfigs" EntityType="plModel.SystemConfig" />
   </EntityContainer>
   <EntityType Name="Article">
     <Key>
@@ -107,6 +109,18 @@
     <Property Name="Keyword" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
     <Property Name="Pioriti" Type="Int32" />
     <Property Name="CateId" Type="Int32" />
+    <Property Name="HomePage" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="Support">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Names" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Deparment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="WebPositions" Type="Int32" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>
@@ -117,5 +131,13 @@
     <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="version" Type="Int32" />
     <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SystemConfig">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Names" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Contents" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

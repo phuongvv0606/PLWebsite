@@ -9,42 +9,20 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <script src="/Scripts/jssor.slider.mini.js"></script>
-    <link href="@Url.Content("~/Content/font-awesome.min.css")" rel="stylesheet">
+    <script src="/Scripts/jquery.twbsPagination.min.js"></script>
+    <link rel="stylesheet" href="@Url.Content("~/Content/font-awesome.min.css")">
 </head>
 <body>
-    <div class="container">
-        <div class="toppage">
+    <div class="container-fuid" style="background: #c5c5c5">
+        <div class="container">
             <div class="topfix">
-                <div class="phone">
-                    <ul>
-                        <li>
-                            <a href="tel:+84981407789">
-                                Kỹ thuật 24/7: 0981407789
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tel:+84976876663">
-                                Kinh doanh: 0976876663
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="email">
-                    <ul>
-                        <li>
-                            <a>
-                                Kỹ thuật 24/7: support@plsoft.com
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                Kinh doanh: Sale@plsoft.com
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                @Html.Action("TopSupport", "Home")
             </div>
 
+        </div>
+    </div>
+    <div class="container">
+        <div class="toppage">
             <div class="topmenu">
                 @Html.Action("GetMenu", "Home")
             </div>
@@ -52,10 +30,46 @@
         <div>
             @RenderBody()
         </div>
-        <div class="bottompage">
+    </div>
+    <div class="container-fuid" style="background:#000;padding-top:30px;margin-top:30px;color:#fff">
+        <div class="container bottompage">
+            <div class="row">
+                <div class="col-lg-3">
+                    @Html.Action("GetPageAddress","Home")
+                </div>
+                <div class="col-lg-5">
+                    @Html.Action("BottomSupport", "Home")
+                </div>
+                <div class="col-lg-2">
+                    <ul>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                            <li>
+                                <a href="#">
+                                    Liên kết @i
+                                </a>
+                            </li>
+                        }
 
+
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <ul>
+                        @for (int i = 0; i < 10; i++)
+                        {
+                            <li>
+                                <a href="#">
+                                    Liên kết @i
+                                </a>
+                            </li>
+                        }
+
+
+                    </ul>
+                </div>
+            </div>
         </div>
-
     </div>
 
 </body>
@@ -73,16 +87,76 @@
         color: #000;
     }
 
-    .phone {
-        float: left;
-    }
 
-    .email {
-        float: right;
-    }
 
     .topfix {
         display: inline-block;
-        width:100%;
+        width: 100%;
+        margin-top: 3px;
     }
+
+        .topfix ul {
+            display: inline-block;
+            margin: 0px;
+            padding: 0px;
+        }
+
+            .topfix ul li {
+                float: left;
+                margin: 0px 20px 0px 0px;
+            }
+
+                .topfix ul li a {
+                    color: #fff;
+                    font-weight: bold;
+                }
+
+    ul {
+        list-style-type: none;
+        margin:0px;
+        padding:0px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+        a:hover, a:focus {
+            text-decoration: none;
+        }
+
+    .productitem {
+        border: solid 1px #fff;
+        box-shadow: 0 0 10px;
+        margin-bottom: 10px;
+    }
+
+    .imagepreview {
+        padding: 5px;
+    }
+
+        .imagepreview img {
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        }
+
+    .proname {
+        font-weight: bold;
+        text-align: center;
+    }
+    .chidcate {
+    }
+
+        .chidcate ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+            .chidcate ul li {
+                margin: 0px;
+                padding: 5px 10px;
+                border:solid 1px;
+
+            }
 </style>

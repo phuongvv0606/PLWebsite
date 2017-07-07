@@ -1,0 +1,12 @@
+﻿@model WebApplication19.Models.SystemConfig
+
+@if (!string.IsNullOrEmpty(Model.Contents))
+{
+    <div>
+        @Html.Raw(Model.Contents)
+    </div>
+}
+else
+{
+    <div></div>
+}

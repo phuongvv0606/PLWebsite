@@ -1,50 +1,42 @@
 ﻿@model List<WebApplication19.Models.Product>
-<div class="row" style="margin:0px;padding:0px">
-    <p>
-        <h3>
-            Các sản phẩm
-        </h3>
-    </p>
-    <div>
+<div class="row" style="">
+    <div class="col-lg-12">
         <p>
-            26.000 Mẫu website
+            <h3>
+                Các sản phẩm
+            </h3>
         </p>
-        
+        <div>
+            <p>
+                26.000 Mẫu website
+            </p>
+
+        </div>
     </div>
+
     @foreach (var item in Model)
     {
-        <div class="col-lg-4 col-md-6 productitem">
-            <a href="@Url.Action("Prodetail", "Home", new  { id = item.Id, seourl = item.SeoUrl })">
-                <div class="imagepreview">
-                    <img alt="@item.Names" src="@Url.Content(item.ImagesPreview)" />
-                </div>
-                <div class="proname">
-                    <h3>
-                        @item.Names
-                    </h3>
+        <div class="col-lg-4 col-md-6 ">
+            <div class="productitem">
+                <a href="@Url.Action("Prodetail", "Home", new  { id = item.Id, seourl = item.SeoUrl })">
+                    <div class="imagepreview">
+                        <img alt="@item.Names" src="@Url.Content(item.ImagesPreview)" />
+                    </div>
+                    <div class="proname">
+                        <h3>
+                            @item.Names
+                        </h3>
 
-                </div>
-            </a>
+                    </div>
+                </a>
+                <p>
+                    <a href="@Url.Action("ConfirmOrder", "Home", new { id = item.Id })">Đặt hàng</a>
+                </p>
+            </div>
+
         </div>
     }
 </div>
 <style>
-    .productitem {
-        border: solid 1px;
-    }
 
-    .imagepreview {
-        padding: 5px;
-    }
-
-        .imagepreview img {
-            max-width: 100%;
-            display: block;
-            margin: auto;
-        }
-
-    .proname {
-        font-weight: bold;
-        text-align: center;
-    }
 </style>

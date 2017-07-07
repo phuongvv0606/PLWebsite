@@ -1,0 +1,31 @@
+﻿@model List<WebApplication19.Models.Article>
+
+<div class="row">
+    <div class="col-lg-12">
+        <p>
+            <h3>
+                Khách hàng
+            </h3>
+        </p>
+    </div>
+   
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-4">
+            <div style="border: solid 1px #fff; box-shadow: 0 0 10px; ">
+                <div>
+                    <img src="@Url.Content(item.ImagePreview)" />
+                </div>
+                <div style="padding:5px;text-align:center">
+                    <div style="color:#000000;font-weight:bold">
+                        @item.Titles
+                    </div>
+                    <div>
+                        @item.SortDesc
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    }
+</div>

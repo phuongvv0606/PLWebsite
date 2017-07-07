@@ -1,0 +1,18 @@
+﻿@model List<WebApplication19.Models.Support>
+<ul>
+
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="tel:@item.Phone">
+                <span style="font-weight:bold;color:#000">
+                    @item.Deparment
+                </span>  <i class="fa fa-phone" style="color:#000bd0"></i>
+                <span style="color:#ff0000">@item.Phone -</span>
+                <i class="fa fa-envelope-o" style="color:#000bd0"></i>
+                <span style="color: #ff0000"> @item.Email</span>
+            </a>
+        </li>
+    }
+
+</ul>

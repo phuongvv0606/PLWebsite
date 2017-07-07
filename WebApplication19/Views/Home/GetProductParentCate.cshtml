@@ -1,0 +1,46 @@
+﻿@model List<WebApplication19.Models.Category>
+<div class="listproductcate">
+    <ul>
+        @foreach (var item in Model)
+        {
+        <li>
+            <div>
+                <a href="@Url.Action("GetAllProductByCate", "Home", new { id = item.Id, seourl = item.SeoUrl })">
+                    @item.Names
+
+                </a>
+            </div>
+
+            <div>
+                @Html.Action("GetProductChidCate", "Home", new {id=item.Id })
+            </div>
+        </li>
+        }
+    </ul>
+</div>
+
+
+<style>
+    .listproductcate {
+        display: block;
+    }
+
+        .listproductcate ul {
+            display: block;
+            margin: 0px;
+            padding: 0px;
+            list-style-type: none;
+        }
+
+            .listproductcate ul li {
+                border: solid 1px #f9a163;
+                padding: 5px 10px;
+                background-color: #ff6a00;
+            }
+
+                .listproductcate ul li a {
+                    color: #fff;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+</style>

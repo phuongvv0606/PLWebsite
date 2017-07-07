@@ -1,0 +1,61 @@
+﻿<div class="row">
+    <div class="col-lg-12">
+        <p>
+            <h3>
+                Sản phẩm
+            </h3>
+        </p>
+    </div>
+</div>
+<div class="row" id="ProductArea">
+
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div>
+            <ul style="" id="pagination">
+                @for (int i = 1; i <= ViewBag.totalpage; i++)
+                {
+                    <li style="display:block;padding:5px;margin:5px;float:left">
+                        @i
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    $(document).ready(function () {
+        var page = getUrlParameter("page");
+        if (page != undefined) {
+            $('#ProductArea').load('@Url.Action("ProductPaging", "Home")?page=' + page);
+        }
+
+    });
+
+    $('#pagination').twbsPagination({
+        totalPages: @ViewBag.totalpage+'',
+        visiblePages: 5,
+        onPageClick: function (event, page) {
+            $('#ProductArea').load('@Url.Action("ProductPaging", "Home")?page=' + page);
+        }
+    });
+
+    function getUrlParameter(sParam) {
+        var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+            sURLVariables = sPageURL.split('&'),
+            sParameterName,
+            i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+                return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+        }
+    };
+</script>
